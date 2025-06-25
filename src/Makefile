@@ -7,6 +7,8 @@
 #   Skip down to "SHORTCUT" if you're going to work only from the
 #   current directory. (Not recommended for serious users.)
 
+CC = clang
+
 #   Change SGBDIR to the directory where all GraphBase files will go:
 SGBDIR = /usr/local/sgb
 
@@ -33,10 +35,10 @@ CWEBINPUTS = /usr/local/lib/cweb
 #CWEBINPUTS = .
 
 #   Uncomment the next line if your C uses <string.h> but not <strings.h>:
-#SYS = -DSYSV
+SYS = -DSYSV
 
 #   If you prefer optimization to debugging, change -g to something like -O:
-CFLAGS = -g -I$(INCLUDEDIR) $(SYS)
+CFLAGS = -O3 -I$(INCLUDEDIR) $(SYS) -fPIC
 
 ########## You shouldn't have to change anything after this point ##########
 
