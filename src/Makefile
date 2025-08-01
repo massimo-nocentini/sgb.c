@@ -38,7 +38,7 @@ CWEBINPUTS = /usr/local/lib/cweb
 SYS = -DSYSV
 
 #   If you prefer optimization to debugging, change -g to something like -O:
-CFLAGS = -O3 -I$(INCLUDEDIR) $(SYS) -fPIC
+CFLAGS = -O3 -I$(INCLUDEDIR) $(SYS) -fPIC -Wno-deprecated-non-prototype -Wno-implicit-int
 
 ########## You shouldn't have to change anything after this point ##########
 
