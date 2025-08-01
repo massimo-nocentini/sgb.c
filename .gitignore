@@ -1,0 +1,6 @@
+src/*.idx
+src/*.log
+src/*.toc
+src/*.scn
+src/*.aux
+src/*.dvi

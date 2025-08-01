@@ -56,6 +56,7 @@ LOADLIBES = $(LDLIBS)
 
 .tex.dvi:
 	tex $*.tex
+	dvipdf $*.dvi
 
 .w.c:
 	if test -r $*.ch; then ctangle $*.w $*.ch; else ctangle $*.w; fi
@@ -69,6 +70,7 @@ LOADLIBES = $(LDLIBS)
 
 .w:
 	make $*.c
+	make $*.dvi
 	make $*
 
 .w.dvi:
