@@ -40,6 +40,12 @@ SYS = -DSYSV
 #   If you prefer optimization to debugging, change -g to something like -O:
 CFLAGS = -O3 -I$(INCLUDEDIR) $(SYS) -fPIC -Wno-deprecated-non-prototype -Wno-implicit-int
 
+build-and-install:
+	make clean
+	make tests
+	sudo make install
+	sudo make installdemos	
+
 ########## You shouldn't have to change anything after this point ##########
 
 LDFLAGS = -L. -L$(LIBDIR)

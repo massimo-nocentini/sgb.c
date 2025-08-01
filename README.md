@@ -4,5 +4,5 @@ A mirror of https://www-cs-faculty.stanford.edu/~knuth/sgb.html, we just provide
 In order to compile and install, please do:
 
 ```bash
-cd src && make tests && sudo make install
+cd src && make build-and-install
 ```
