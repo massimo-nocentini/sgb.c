@@ -1,6 +1,8 @@
-# sgb.c
-A mirror of https://www-cs-faculty.stanford.edu/~knuth/sgb.html, we just provide a small change in the Makefile 
-so that the compiled library can be linked (actually, we just add the `-fPIC` flag). Moreover, we compile some PDF files about core components.
+# The Stanford GraphBase
+
+A mirror of [The Stanford GraphBase: A Platform for Combinatorial Computing](https://www-cs-faculty.stanford.edu/~knuth/sgb.html), 
+we just provide a small change in the Makefile so that the compiled library can be linked (actually, we just add the `-fPIC` flag). 
+Moreover, we compile some PDF files about core components.
 
 ## Compilation
 
@@ -9,6 +11,8 @@ In order to compile and install, we provide a new `Makefile` rule `complete`; pl
 ```bash
 cd src && make complete
 ```
+
+provided that both `clang` and `texlive` are available in your system.
 
 ## PDF files
 
