@@ -1,5 +1,8 @@
 # sgb.c
-A mirror of https://www-cs-faculty.stanford.edu/~knuth/sgb.html, we just provide a small change in the Makefile so that the compiled library can be linked (actually, we just add the `-fPIC` flag).
+A mirror of https://www-cs-faculty.stanford.edu/~knuth/sgb.html, we just provide a small change in the Makefile 
+so that the compiled library can be linked (actually, we just add the `-fPIC` flag). Moreover, we compile some PDF files about core components.
+
+## Compilation
 
 In order to compile and install, we provide a new `Makefile` rule `complete`; please do:
 
@@ -7,7 +10,9 @@ In order to compile and install, we provide a new `Makefile` rule `complete`; pl
 cd src && make complete
 ```
 
-that generates the following PDF files:
+## PDF files
+
+Some additional documentation extracted and compiled from `.w` core sources:
 
 |PDF|Summary|
 |---|---|
