@@ -40,11 +40,13 @@ SYS = -DSYSV
 #   If you prefer optimization to debugging, change -g to something like -O:
 CFLAGS = -O3 -I$(INCLUDEDIR) $(SYS) -fPIC -Wno-deprecated-non-prototype -Wno-implicit-int
 
-build-and-install:
+#   This is our own addition to compile everything, doc included for kernel files:
+complete:
 	make clean
 	make tests
 	sudo make install
-	sudo make installdemos	
+	sudo make installdemos
+	make doc
 
 ########## You shouldn't have to change anything after this point ##########
 
@@ -162,6 +164,24 @@ uninstalldemos:
 
 doc:
 	tex abstract.plaintex
+	cweave gb_graph.w && tex gb_graph.tex && dvipdf gb_graph.dvi
+	cweave gb_flip.w && tex gb_flip.tex && dvipdf gb_flip.dvi
+	cweave gb_io.w && tex gb_io.tex && dvipdf gb_io.dvi
+	cweave gb_sort.w && tex gb_sort.tex && dvipdf gb_sort.dvi
+	cweave gb_dijk.w && tex gb_dijk.tex && dvipdf gb_dijk.dvi
+	cweave gb_save.w && tex gb_save.tex && dvipdf gb_save.dvi
+	cweave gb_types.w && tex gb_types.tex && dvipdf gb_types.dvi
+	cweave gb_books.w && tex gb_books.tex && dvipdf gb_books.dvi
+	cweave gb_econ.w && tex gb_econ.tex && dvipdf gb_econ.dvi
+	cweave gb_games.w && tex gb_games.tex && dvipdf gb_games.dvi
+	cweave gb_gates.w && tex gb_gates.tex && dvipdf gb_gates.dvi
+	cweave gb_lisa.w && tex gb_lisa.tex && dvipdf gb_lisa.dvi
+	cweave gb_miles.w && tex gb_miles.tex && dvipdf gb_miles.dvi
+	cweave gb_plane.w && tex gb_plane.tex && dvipdf gb_plane.dvi
+	cweave gb_raman.w && tex gb_raman.tex && dvipdf gb_raman.dvi
+	cweave gb_rand.w && tex gb_rand.tex && dvipdf gb_rand.dvi
+	cweave gb_roget.w && tex gb_roget.tex && dvipdf gb_roget.dvi
+	cweave gb_words.w && tex gb_words.tex && dvipdf gb_words.dvi
 
 clean:
 	rm -f *~ *.o *.c *.h libgb.a certified \
