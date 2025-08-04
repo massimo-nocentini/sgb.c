@@ -164,6 +164,8 @@ uninstalldemos:
 
 doc:
 	tex abstract.plaintex
+	cweave boilerplate.w && tex boilerplate.tex && dvipdf boilerplate.dvi
+	cweave gb_basic.w && tex gb_basic.tex && dvipdf gb_basic.dvi
 	cweave gb_graph.w && tex gb_graph.tex && dvipdf gb_graph.dvi
 	cweave gb_flip.w && tex gb_flip.tex && dvipdf gb_flip.dvi
 	cweave gb_io.w && tex gb_io.tex && dvipdf gb_io.dvi
